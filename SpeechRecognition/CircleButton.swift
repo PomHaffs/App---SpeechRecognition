@@ -6,16 +6,16 @@
 //  Copyright © 2016 PomHaffs. All rights reserved.
 //
 
+
+//Setup for GUI to allow for corner radius to be seen in storyboard
 import UIKit
 
 class CircleButton: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    @IBInspectable var cornerRadius: CGFloat = 30.0 {
+        didSet{
+            layer.cornerRadius = cornerRadius
+        }
     }
-    */
 
 }
