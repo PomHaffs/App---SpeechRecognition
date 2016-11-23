@@ -13,6 +13,7 @@
 		FEEAD4F01DE515560012071A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEEAD4EF1DE515560012071A /* Assets.xcassets */; };
 		FEEAD4F31DE515560012071A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEEAD4F11DE515560012071A /* LaunchScreen.storyboard */; };
 		FEEAD4FE1DE519770012071A /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAD4FD1DE519770012071A /* CircleButton.swift */; };
+		FEEAD5001DE51FF30012071A /* test.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FEEAD4FF1DE51FF30012071A /* test.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FEEAD4F21DE515560012071A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEEAD4F41DE515560012071A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEEAD4FD1DE519770012071A /* CircleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		FEEAD4FF1DE51FF30012071A /* test.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FEEAD4FB1DE5192D0012071A /* Model */,
 				FEEAD4FA1DE519260012071A /* View */,
 				FEEAD4FC1DE519320012071A /* Controller */,
+				FEEAD5011DE51FFC0012071A /* Resources */,
 				FEEAD4E81DE515560012071A /* AppDelegate.swift */,
 				FEEAD4EC1DE515560012071A /* Main.storyboard */,
 				FEEAD4EF1DE515560012071A /* Assets.xcassets */,
@@ -89,6 +92,14 @@
 				FEEAD4EA1DE515560012071A /* ViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		FEEAD5011DE51FFC0012071A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEEAD4FF1DE51FF30012071A /* test.m4a */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEAD5001DE51FF30012071A /* test.m4a in Resources */,
 				FEEAD4F31DE515560012071A /* LaunchScreen.storyboard in Resources */,
 				FEEAD4F01DE515560012071A /* Assets.xcassets in Resources */,
 				FEEAD4EE1DE515560012071A /* Main.storyboard in Resources */,

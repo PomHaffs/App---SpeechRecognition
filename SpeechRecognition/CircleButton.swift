@@ -9,13 +9,22 @@
 
 //Setup for GUI to allow for corner radius to be seen in storyboard
 import UIKit
-
+//This is needed for ref
+@IBDesignable
 class CircleButton: UIButton {
 
+    func setupView() {
+        layer.cornerRadius = cornerRadius
+    }
+    
     @IBInspectable var cornerRadius: CGFloat = 30.0 {
         didSet{
-            layer.cornerRadius = cornerRadius
+            setupView()
         }
+    }
+    
+    override func prepareForInterfaceBuilder() {
+        setupView()
     }
 
 }

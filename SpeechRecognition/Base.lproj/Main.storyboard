@@ -38,8 +38,8 @@
                                     <constraint firstAttribute="height" constant="55" id="yY3-Od-o3n"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play &amp; Transcribe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AA-hY-Lkb">
-                                <rect key="frame" x="67.5" y="624" width="240.5" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AA-hY-Lkb">
+                                <rect key="frame" x="38.5" y="624" width="299" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="29"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -51,18 +51,32 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n91-Lu-cUx">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="wOa-ub-XVE">
+                                <rect key="frame" x="157.5" y="556.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0mB-34-hil"/>
+                                    <constraint firstAttribute="width" constant="60" id="MHP-Jf-Q7c"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n91-Lu-cUx" customClass="CircleButton" customModule="SpeechRecognition" customModuleProvider="target">
                                 <rect key="frame" x="157" y="556" width="60" height="60"/>
                                 <color key="backgroundColor" red="0.12882286310195923" green="0.074443958699703217" blue="0.79405039548873901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="E8a-xJ-vsk"/>
                                     <constraint firstAttribute="height" constant="60" id="l7V-eh-geU"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2AA-hY-Lkb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0eJ-T5-fJo"/>
+                            <constraint firstItem="wOa-ub-XVE" firstAttribute="centerY" secondItem="n91-Lu-cUx" secondAttribute="centerY" id="5bt-dW-VW6"/>
+                            <constraint firstItem="wOa-ub-XVE" firstAttribute="centerX" secondItem="n91-Lu-cUx" secondAttribute="centerX" id="Bcz-k4-xeD"/>
                             <constraint firstItem="n91-Lu-cUx" firstAttribute="top" secondItem="eXm-KR-Yc1" secondAttribute="bottom" constant="8" id="KgT-lZ-KG2"/>
                             <constraint firstItem="eXm-KR-Yc1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="ZWa-D4-QbI"/>
                             <constraint firstItem="AuF-zI-6jV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fkY-xs-1Ww"/>
@@ -76,6 +90,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2AA-hY-Lkb" secondAttribute="bottom" constant="8" id="zFL-XC-xLO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ActivitySpinner" destination="wOa-ub-XVE" id="gGe-FV-Raa"/>
+                        <outlet property="TranscriptionTextField" destination="eXm-KR-Yc1" id="66C-kf-u4Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
